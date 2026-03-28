@@ -19,4 +19,4 @@ class StudyModel:
     print(f"Model trained with accuracy: {accuracy:.2f}")
 
   def predict(self, input_data):
-    return self.model.predict([[input_data]])[0]
+    return self.model.predict(input_data)[0]
