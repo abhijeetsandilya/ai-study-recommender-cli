@@ -24,6 +24,7 @@ Supports floating-point inputs (e.g., 82.5)
 Structured codebase (separation of model, logic, and interface)
 Basic evaluation using train-test split
 ## Project Structure
+```
 ai-study-recommender-cli/
 │
 ├── data/
@@ -35,6 +36,7 @@ ai-study-recommender-cli/
 │
 ├── main.py
 └── README.md
+```
 ## How It Works
 Dataset is loaded from data/dataset.csv
 A Decision Tree model is trained using the data
