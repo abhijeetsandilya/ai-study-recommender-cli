@@ -1,4 +1,4 @@
-from src.model import StudyModel
+from src.model import studyModel
 from src.recommend import get_recommendation
 
 def main():
