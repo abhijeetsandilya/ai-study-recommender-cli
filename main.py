@@ -1,5 +1,6 @@
 from src.model import StudyModel
 from src.recommend import get_recommendation
+import pandas as pd
 
 def main():
     model = StudyModel()
@@ -11,14 +12,15 @@ def main():
     print("\n--- AI Study Recommender ---")
 
     try:
-        math = int(input("Enter Math score:  "))
-        physics = int(input("Enter Physics score:  "))
-        dsa = int(input("Enter DSA score:  "))
+        math = float(input("Enter Math score:  "))
+        physics = float(input("Enter Physics score:  "))
+        dsa = float(input("Enter DSA score:  "))
     except ValueError:
         print("Invalid input. Please enter numbers.")
         return
-
-    prediction = model.predict(math, physics, dsa)
+    input_data = pd.DataFrame([[math, physics, dsa]],
+                          columns=["math", "physics", "dsa"])
+    prediction = model.predict(input_data)
     recommendation = get_recommendation(prediction)
 
     print(f"\nPredicted Level:  {prediction.upper()}")
