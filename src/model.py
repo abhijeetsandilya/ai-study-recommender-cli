@@ -18,5 +18,5 @@ class StudyModel:
     accuracy = self.model.score(X_test, y_test)
     print(f"Model trained with accuracy: {accuracy:.2f}")
 
-  def predict(self, math, physics, dsa):
-    return self.model.predict([[math, physics, dsa]])[0]
+  def predict(self, input_data):
+    return self.model.predict([[input_data]])[0]
