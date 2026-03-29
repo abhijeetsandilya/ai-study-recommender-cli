@@ -85,12 +85,7 @@ Very small dataset (not representative of real-world data)
 Model may overfit (accuracy can be misleading)
 Recommendation system is rule-based, not learned
 No model persistence (retraining happens on every run)
-## Future Improvements
-Increase dataset size (100+ samples)
-Save and load trained model using joblib
-Add input validation and error handling
-Improve recommendation logic based on individual subject weaknesses
-Add web interface (FastAPI or frontend)
+
 ## Tech Stack
 Python
 pandas
